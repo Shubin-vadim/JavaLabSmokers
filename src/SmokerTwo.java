@@ -21,12 +21,4 @@ public class SmokerTwo implements Runnable{
             }
         }
     }
-
-    private void smoking(){
-        try {
-            Thread.sleep(2000);
-        }catch (InterruptedException e){
-            e.printStackTrace();
-        }
-    }
 }

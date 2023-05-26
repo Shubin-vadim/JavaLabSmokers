@@ -48,12 +48,4 @@ public class Bartender implements Runnable{
             }
         }
     }
-
-    private void doing_cigarette(){
-        try {
-            Thread.sleep(2000);
-        }catch (InterruptedException e){
-            e.printStackTrace();
-        }
-    }
 }
