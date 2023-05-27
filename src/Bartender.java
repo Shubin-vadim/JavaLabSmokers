@@ -7,7 +7,7 @@ public class Bartender implements Runnable{
         while (true){
             try {
                 Main.lock.lock();
-                while ((Main.paper && Main.match) || (Main.paper && Main.tobacco) || (Main.match && Main.tobacco)) {
+                while ((Main.tobacco && Main.paper) || (Main.tobacco && Main.match) || (Main.paper && Main.match)) {
                     try {
                         Main.bartender.await();
                     } catch (InterruptedException e) {

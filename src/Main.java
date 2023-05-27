@@ -9,13 +9,13 @@ public class Main {
   public static boolean match = false;
 
    public static Lock lock = new ReentrantLock();
-   public static Condition bartender = lock.newCondition();
-   public static Condition smoker_one = lock.newCondition();
-   public static Condition smoker_two = lock.newCondition();
-   public static Condition smoker_three = lock.newCondition();
+    public final static Condition bartender = lock.newCondition();
+   public final static Condition smoker_one = lock.newCondition();
+   public final static Condition smoker_two = lock.newCondition();
+    public final static Condition smoker_three = lock.newCondition();
 
     public static void main(String[] args) {
-//        System
+
         SmokerOne smoker_one = new SmokerOne();
         SmokerTwo smoker_two = new SmokerTwo();
         SmokerThree smoker_three = new SmokerThree();
